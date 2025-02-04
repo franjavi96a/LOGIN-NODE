@@ -1,0 +1,20 @@
+<!-- src/views/login.ejs -->
+<%- include('partials/header') %>
+
+    <h2>Iniciar Sesión</h2>
+    <% if (errorMessage) { %>
+        <p class="error"><%= errorMessage %></p>
+    <% } %>
+    <form action="/api/login" method="POST">
+        <input type="text" name="username" placeholder="Usuario" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <button type="submit">Ingresar</button>
+    </form>
+    <div class="message">
+        <p>¿No tienes una cuenta? <a href="/api/register">Regístrate aquí</a></p>
+    </div>
+
+</main>
+</body>
+</html>
+

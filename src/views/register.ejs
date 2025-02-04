@@ -1,0 +1,20 @@
+<!-- src/views/register.ejs -->
+<%- include('partials/header') %>
+
+    <h2>Registro de Usuario</h2>
+    <% if (errorMessage) { %>
+        <p class="error"><%= errorMessage %></p>
+    <% } %>
+    <form action="/api/register" method="POST">
+        <input type="text" name="username" placeholder="Usuario" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <button type="submit">Registrar</button>
+    </form>
+    <div class="message">
+        <p>¿Ya tienes una cuenta? <a href="/api/login">Inicia sesión aquí</a></p>
+    </div>
+
+</main>
+</body>
+</html>
+

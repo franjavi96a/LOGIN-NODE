@@ -1,0 +1,11 @@
+<%- include('partials/header') %>
+
+    <h2>Bienvenido, <%= username %>!</h2>
+    <p>Has iniciado sesión correctamente.</p>
+    <form action="/api/logout" method="POST">
+        <button type="submit">Cerrar Sesión</button>
+    </form>
+
+</main>
+</body>
+</html>
